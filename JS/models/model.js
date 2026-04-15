@@ -66,6 +66,17 @@ const model = {
         },
     ],
 
+        groups: [
+        {
+            name: "Familie",
+            lists: [1, 2]
+        },
+        {
+            name: "Venner",
+            lists: [3, 4]
+    }
+    ],
+
     users: [
         { id: "A001", userName: "Bjørn", emailAdress: "bn@gmail.com", role: "Admin", lists: 20, isActive: true, },
         { id: "A002", userName: "Rebecka", emailAdress: "ra@gmail.com", role: "Premium", lists: 15, isActive: true, },
