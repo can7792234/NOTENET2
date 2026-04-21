@@ -3,7 +3,7 @@ const model = {
         currentPage: "logInPage",
         currentUser: "",
         isAdmin: true,
-
+        selectedListId: null,
     },
     inputs: {
         logInPage: {
@@ -34,49 +34,55 @@ const model = {
     lists: [
         {
             id: 1,
-            title: "Mat",
+            title: "17.05 Party [ 15🙍 🛡️ ]", // il numero utenti non deve essere hardcoded
             desciption: "Ingredienser",
-            content: ["Tortellini", "Saus"],
+            content: [
+                { text: "Øl", isChecked: false, addedBy: "Ema" },
+                { text: "Vin", isChecked: false, addedBy: "Andreas" },
+                { text: "Mini norsk-flagger", isChecked: false, addedBy: "Ema" },
+            ],
             isFavourite: false,
             isShared: false,
         },
         {
             id: 2,
-            title: "Pizza",
+            title: "Pizza [ 2🙍 🛡️ ]", // il numero utenti non deve essere hardcoded
             desciption: "Hvordan lage pizza",
-            content: ["Lage deig", "Putt i ofvnen", "vent", "ta ut", "spis"],
+            content: [
+                { text: "Lage deig", isChecked: false, addedBy: "Andreas" },
+                { text: "Putt i ofvnen", isChecked: false, addedBy: "Bjørn" },
+                { text: "vent", isChecked: false, addedBy: "Ove" },
+                { text: "ta ut", isChecked: false, addedBy: "Hege" },
+                { text: "spis", isChecked: false, addedBy: "Ema" },
+            ],
             isFavourite: false,
             isShared: false,
         },
         {
             id: 3,
-            title: "Filmomtale",
+            title: "Filmer",
             desciption: "",
-            content: ["Beskrivelse av filmens innhold"],
+            content: [
+                { text: "Beskrivelse av filmens innhold", isChecked: false, addedBy: "Bjørn" },
+            ],
             isFavourite: false,
             isShared: false,
         },
         {
             id: 4,
-            title: "Front end",
+            title: "Front end [ 6🙍 🛡️ ]", // il numero utenti non deve essere hardcoded
             desciption: "Beskrivelse av arbeidsoppgaver",
-            content: ["Presentasjon", "Sende epost", "Møte kl.12:15", "Kaffe", "Jobbe (valgfritt)"],
+            content: [
+                { text: "Presentasjon", isChecked: false, addedBy: "Ove" },
+                { text: "Sende epost", isChecked: false, addedBy: "Andreas" },
+                { text: "Møte kl.12:15", isChecked: false, addedBy: "Rebecka" },
+                { text: "Kaffe", isChecked: false, addedBy: "Ema" },
+                { text: "Jobbe (valgfritt)", isChecked: false, addedBy: "Hege" },
+            ],
             isFavourite: false,
             isShared: false,
         },
     ],
-
-        groups: [
-        {
-            name: "Familie",
-            lists: [1, 2]
-        },
-        {
-            name: "Venner",
-            lists: [3, 4]
-    }
-    ],
-
     users: [
         { id: "A001", userName: "Bjørn", emailAdress: "bn@gmail.com", role: "Admin", lists: 20, isActive: true, },
         { id: "A002", userName: "Rebecka", emailAdress: "ra@gmail.com", role: "Premium", lists: 15, isActive: true, },
