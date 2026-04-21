@@ -66,7 +66,7 @@ function addItem() {
     list.content.push({
         text: text,
         isChecked: false,
-        addedBy: model.app.currentUser,
+        addedBy: model.app.currentUser, // ma chi è il current user?
     });
 
     model.inputs.myListsPage.newItemText = "";

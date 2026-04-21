@@ -1,8 +1,10 @@
-function updateView() {
-	const appElement = document.getElementById("app");
-	if (!appElement) return;
+// function updateView() {
+// 	const appElement = document.getElementById("app");
+// 	if (!appElement) return;
 
-	appElement.innerHTML = homeView();
-}
+// 	appElement.innerHTML = homeView();
+// }
+
+// there is already in view.js ...
 
 updateView();

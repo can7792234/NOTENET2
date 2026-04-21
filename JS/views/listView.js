@@ -7,7 +7,7 @@ function getBadgeClass(userName) {
 function renderSubMenu() {
     const subMenu = document.getElementById("subMenu");
 
-    if (model.app.currentPage !== "lists") {
+    if (model.app.currentPage !== "myListsPage") {
         subMenu.innerHTML = "";
         return;
     }
@@ -30,18 +30,19 @@ function renderSubMenu() {
     subMenu.innerHTML = html;
 }
 
-function myListsPage(app) {
+function myListsPage() {
+
+    renderSubMenu();
     const selectedList = model.lists.find(list => list.id === model.app.selectedListId);
 
     if (!selectedList) {
-        app.innerHTML = `
+        return `
             <article class="card-box">
                 <h2>My Lists</h2>
                 <p>No list selected.</p>
                 <button onclick="showAddListPrompt()">Create first list</button>
             </article>
         `;
-        return;
     }
 
     const itemsHtml = selectedList.content.length === 0
@@ -58,7 +59,7 @@ function myListsPage(app) {
           `).join("")
           + `</ul>`;
 
-    app.innerHTML = `
+    return `
         <div class="list-page-box">
             <h2>${escapeHtml(selectedList.title)}</h2>
             <p class="muted">${escapeHtml(selectedList.desciption || "")}</p>
