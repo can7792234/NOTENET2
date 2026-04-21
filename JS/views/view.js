@@ -1,6 +1,6 @@
 function updateView() {
     const app = document.getElementById("app");
-    document.getElementById("subMenu").innerHTML = "";
+    // document.getElementById("subMenu").innerHTML = "";
 
     // if (model.app.currentPage === "logInPage") {
     //     app.innerHTML = logInPage();
@@ -18,6 +18,7 @@ function updateView() {
 
     else if (model.app.currentPage === "myListsPage") {
         app.innerHTML = myListsPage();
+        renderSubMenu();
     }
 
     else if (model.app.currentPage === "adminPage") {
