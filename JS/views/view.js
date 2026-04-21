@@ -1,11 +1,13 @@
 function updateView() {
     const app = document.getElementById("app");
 
-    if (model.app.currentPage === "logInPage") {
-        app.innerHTML = logInPage();
-    }
+    // if (model.app.currentPage === "logInPage") {
+    //     app.innerHTML = logInPage();
+    // }
+    // same for the model: first i check if everything else works, then the login will be un-commented againb
 
-    else if (model.app.currentPage === "homePage") {
+    // else 
+    if (model.app.currentPage === "homePage") {
         app.innerHTML = homeView();
     }
 

@@ -1,6 +1,7 @@
 const model = {
     app: {
-        currentPage: "logInPage",
+        // currentPage: "logInPage", i am commenting this out to check if everything ele works, then we can work on the login and its functionality.
+        currentPage: "homePage",
         currentUser: "",
         isAdmin: true,
         selectedListId: null,
