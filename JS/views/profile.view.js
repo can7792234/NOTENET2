@@ -1,7 +1,7 @@
 function profilePage() {
     const user = model.app.currentUser;
 
-    return `
+    return renderNavbar() + /*HTML*/ `
     <div>
 
     <!-- NAVBAR -->

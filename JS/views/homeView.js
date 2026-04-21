@@ -1,7 +1,7 @@
 function homeView() {
     const user = model.users.find(user => user.id === model.app.currentUser);
     
-    return /*HTML*/ `
+    return renderNavbar() + /*HTML*/ `
         <div class="home-page">
             <section class="home-hero">
                 <span class="home-hero__eyebrow">Velkommen til NoteNet</span>

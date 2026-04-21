@@ -36,7 +36,7 @@ function myListsPage() {
     const selectedList = model.lists.find(list => list.id === model.app.selectedListId);
 
     if (!selectedList) {
-        return `
+        return renderNavbar() + `
             <article class="card-box">
                 <h2>My Lists</h2>
                 <p>No list selected.</p>
@@ -59,7 +59,7 @@ function myListsPage() {
           `).join("")
           + `</ul>`;
 
-    return `
+    return renderNavbar() + `
         <div class="list-page-box">
             <h2>${escapeHtml(selectedList.title)}</h2>
             <p class="muted">${escapeHtml(selectedList.desciption || "")}</p>

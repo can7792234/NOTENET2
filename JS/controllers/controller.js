@@ -7,4 +7,9 @@
 
 // there is already in view.js ...
 
+function selectMain(key) {
+    model.app.currentPage = key;
+    updateView();
+}
+
 updateView();

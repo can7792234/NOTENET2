@@ -1,5 +1,6 @@
 function updateView() {
     const app = document.getElementById("app");
+    document.getElementById("subMenu").innerHTML = "";
 
     // if (model.app.currentPage === "logInPage") {
     //     app.innerHTML = logInPage();

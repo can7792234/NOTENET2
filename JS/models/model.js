@@ -1,6 +1,6 @@
 const model = {
     app: {
-        // currentPage: "logInPage", i am commenting this out to check if everything ele works, then we can work on the login and its functionality.
+        // currentPage: "logInPage", i am commenting this out to check if everything else works, then we can work on the login and its functionality.
         currentPage: "homePage",
         currentUser: "",
         isAdmin: true,
